@@ -30,10 +30,6 @@ env_sf <- env_sf |>
 env_df <- env_sf |> st_drop_geometry()
 write_csv(env_df, here("output","env_grid_clean.csv"))
 
-# Geometry to GeoPackage so you stay RDS-free
-gpkg_path <- here("data","env_grid_clean.gpkg")
-if (file.exists(gpkg_path)) file.remove(gpkg_path)
-st_write(env_sf, gpkg_path, layer = "env_grid_clean", quiet = TRUE)
 
 message("Wrote: output/env_grid_clean.csv and data/env_grid_clean.gpkg")
 
