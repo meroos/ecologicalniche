@@ -53,8 +53,8 @@ centroids <- scores |>
 readr::write_csv(centroids, here("output","ecozone_centroids_PC1_PC8.csv"))
 
 # Write geometry with ecozones to GeoPackage
-env_sf <- st_read(here("data","env_grid_clean.gpkg"), layer = "env_grid_clean", quiet = TRUE) |>
-  left_join(scores |> dplyr::select(row_id, Ecozone_renamed, Ecozone_Name), by = "row_id")
+#env_sf <- st_read(here("data","env_grid_clean.gpkg"), layer = "env_grid_clean", quiet = TRUE) |>
+#  left_join(scores |> dplyr::select(row_id, Ecozone_renamed, Ecozone_Name), by = "row_id")
 
 gpkg_out <- here("data","env_with_ecozones.gpkg")
 if (file.exists(gpkg_out)) file.remove(gpkg_out)
