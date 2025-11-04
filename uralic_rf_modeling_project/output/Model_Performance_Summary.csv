@@ -1,0 +1,10 @@
+"Language","Grid_Cells","OOB_Error_Percent","Variance_Explained","Test_AUC"
+"Finnic",6514,3.5,96.46,0.994
+"Hungarian",6514,1.4,98.65,0.995
+"Khanty",6514,2.6,97.37,0.985
+"Mansi",6514,1.2,98.78,0.965
+"Mari",6514,0.8,99.22,0.66
+"Mordvin",6514,0.8,99.21,0.863
+"Permic",6514,3.1,96.95,0.988
+"Saami",6514,2.3,97.71,0.999
+"Samoyedic",6513,3.7,96.29,0.997

@@ -1,0 +1,10 @@
+"Language","Train_AUC","Test_AUC","Optimal_Threshold"
+"Finnic",1,0.994,0.04
+"Hungarian",0.999,0.995,0.005
+"Khanty",0.999,0.985,0.024
+"Mansi",1,0.965,0.004
+"Mordvin",0.94,0.863,0.001
+"Mari",0.831,0.66,0.001
+"Permic",0.999,0.988,0.031
+"Saami",1,0.999,0.045
+"Samoyedic",0.999,0.997,0.098
