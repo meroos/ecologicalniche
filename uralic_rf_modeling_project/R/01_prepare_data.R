@@ -39,5 +39,5 @@ class(uralic_rf)
 
 df <-uralic_rf
 sapply(df, class)
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory" dir.create(output_dir, showWarnings = FALSE)
+output_dir <- "x:/xxx/xxx/rf_output_directory" dir.create(output_dir, showWarnings = FALSE)
 saveRDS(uralic_rf_d, "data/uralic_rf_cleaned.RDS")
