@@ -6,16 +6,16 @@ library(cowplot)
 
 citation("pdp")
 # Output directory
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
+output_dir <- "x:/xxx/xxx/rf_output_directory"
 
 # Custom PDP variables for all languages
 custom_pdp_vars <- c(
   Finnic = "T_seasonal",
   Hungarian = "P_annual", # curves show decline in suitability with higher values, captures climatic constraint in steppe transition zone
-  Khanty = "T_mean", # interesting curve
+  Khanty = "T_mean",  
   Mansi = "roughness", # Uralic foothill signal, increasing suitability with terrain complexity 
   Mari = "lake_dist", # cultural-ecological relevance, settled near river and lakes Volga basin
-  Mordvin = "lake_dist", # Ob river
+  Mordvin = "lake_dist", # lakes/river vicinity
   Permic = "T_seasonal", # strong alignment with mountainous ecozone signal, Ural foothills
   Saami = "P_annual", # Sharp increase with moderate seasonality, meaningful cold adaptation signal
   Samoyedic = "permafrost" # strong linear decline in suitability
