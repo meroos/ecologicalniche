@@ -1,5 +1,3 @@
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
-
 # Initialize with geometry
 prob_combined <- st_sf(geometry = geometry_data)
 colnames(prob_combined)
@@ -73,7 +71,6 @@ combined_rf_overlap <- combined_rf_overlap +
 
 # Display the map
 print(combined_rf_overlap)
-
 
 # Save to file
 ggsave(filename = file.path(output_dir, "combined_rf_overlap.png"), plot = combined_rf_overlap, width = 18, height = 12, dpi = 300)
