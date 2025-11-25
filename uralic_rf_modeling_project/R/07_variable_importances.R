@@ -84,9 +84,6 @@ generate_pdp <- function(language, results_list, df, predictors) {
   return(p)
 }
 
-# Output directory
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
-
 # For each language
 for (lang in names(results_list)) {
   cat("Generating PDP for", lang, "...\n")
@@ -110,9 +107,6 @@ library(dplyr)
 library(pdp)
 library(forcats)
 library(patchwork)
-
-# Output directory
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
 
 # Set variable order for consistent Y-axis
 var_order <- c(
@@ -248,8 +242,6 @@ library(pdp)
 library(patchwork)
 library(cowplot)
 
-# Output
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
 
 # Function to create PDP with automatic ?????? annotation
 generate_pdp_with_arrow <- function(language, model, top_var, train_data) {
