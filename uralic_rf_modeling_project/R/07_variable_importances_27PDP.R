@@ -5,7 +5,7 @@ library(patchwork)
 library(cowplot)
 
 # Output directory
-output_dir_pdp <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory/PDPs_by_variable_per_language"
+output_dir_pdp <- "x:/xxx/xxx/rf_output_directory/PDPs_by_variable_per_language"
 dir.create(output_dir_pdp, showWarnings = FALSE)
 
 # Ecozone-based best PDP variable candidates
