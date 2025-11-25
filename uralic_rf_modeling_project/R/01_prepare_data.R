@@ -1,46 +1,9 @@
 library(dplyr)
 library(sf)
 library(ggplot2)
-setwd("D:/URKO_PhDposition/Article 3_ecological niche")
-getwd()
-mydata_uralic_sp <- read_sf("grid50_RF_3_5_2024.shp")
-uralic_rf <- mydata_uralic_sp[,c(7,6,15,18,30,67,23,28,59,45,47,48,55,53,54,40:44,49:52)]
-uralic_rf <- st_transform(uralic_rf, "ESRI:102025")
-plot(st_geometry(uralic_rf))
-colnames(uralic_rf)
-
-# Rename and reorder columns
-uralic_rf <- rename(
-  uralic_rf,
-  T_mean = bio1,
-  T_seasonal = bio4,
-  P_annual = bio12,
-  P_seasonal = bio15,
-  dem_mean = demmean,
-  roughness = roughnessm,
-  snow_mean = snowmean,
-  permafrost = pfrost_fra,
-  woodland = woodland,
-  soil_quality = soil_quali,
-  river_lenght = river_LENG,
-  biodiversity = biodiversi,
-  swamp = peat_frac,
-  lake_dist = lakes_dist,
-  sea_dist = sea_distan,
-  Finnic = Finnic_bin,
-  Hungarian = Hungar_bin,
-  Khanty = Khanty_bin,
-  Mansi = Mansi_bin,
-  Mordvin = Mordvi_bin,
-  Mari = Mari_bin,
-  Permic = Permic_bin,
-  Samoyedic = Samyed_bin,
-  Saami = Saami_bin
-)
-
 
 # Load the shapefile
-uralic_rf <- st_read("data/uralic_rf.shp")
+uralic_rf <- st_read("data/uralic_rf_3_9_2024.shp")
 # Save geometry for later
 uralicrf_geometry_data <- st_geometry(uralic_rf)
 colnames(uralic_rf)
