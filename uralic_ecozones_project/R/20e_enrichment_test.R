@@ -31,7 +31,7 @@ library(dplyr)
 
 
 # ---------------------------------------------------------
-# 1. SAFE TORUS SHIFT (matrix-based, no ext(), no crop())
+# 1. TORUS SHIFT
 # ---------------------------------------------------------
 torus_shift <- function(r, dx, dy) {
   nr <- nrow(r)
@@ -138,7 +138,7 @@ run_torus_enrichment <- function(lang_col, nperm = 199) {
 
 table(uralic_rf$Ecozone_renamed)
 # ---------------------------------------------------------
-# 3. RUN ENRICHMENT FOR ALL LANGUAGES
+# 3. ENRICHMENT FOR ALL LANGUAGES
 # ---------------------------------------------------------
 enrichment_test <- bind_rows(
   lapply(language_cols, function(L) run_torus_enrichment(L, nperm = 999))
@@ -179,4 +179,5 @@ write.csv(enrichment_named,
           row.names = FALSE)
 
 message("Saved: ", file.path(out_dir, "Ecozone_enrichment_results.csv"))
+
 
