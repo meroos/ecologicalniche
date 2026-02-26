@@ -1,28 +1,107 @@
-This repository contains the environmental data, language presence–absence grid data, analysis scripts, and source data necessary to reproduce all results and figures reported in the manuscript.
-SOFTWARE
-R version X.X.X
-Key packages: ranger, sf, terra, caret, pROC, ggplot2
-Full session information available in scripts/00_session_info.R
+# Data and Code for Manuscript Submission  
+*(Anonymised)*
 
-REPRODUCTION INSTRUCTIONS
+## Overview
 
-Run scripts/01_prepare_data.R
+This repository contains all data and R scripts required to reproduce the analyses presented in the submitted manuscript on ecological niche modelling of language ranges across Northern Eurasia.
 
-Run scripts/02_PCA_clustering.R
+The workflow consists of two components:
 
-Run scripts/03_enrichment_test.R
+1. **Ecozone delineation**
+   - PCA of environmental variables
+   - Ecozone clustering
+   - Spatial permutation (torus) enrichment tests
 
-Run scripts/04_random_forest_models.R
+2. **Random Forest modelling**
+   - Presence–absence classification per language
+   - Model evaluation (AUC, ROC, confusion matrices)
+   - Variable importance and partial dependence
+   - Predicted probability maps
 
-Run scripts/05_generate_figures.R
+The repository is anonymised for double-anonymous peer review.
 
-DATA DESCRIPTION
+---
 
-data_raw/
-Description of contents
+## Structure
 
-data_processed/
-Description
+```
+uralic_ecozones_project/
+uralic_rf_modeling_project/
+README.md
+LICENSE
+```
 
-source_data_figures/
-Contains CSV files corresponding to all figures and tables
+---
+
+## Ecozones: `uralic_ecozones_project/`
+
+```
+data/     Input environmental data and derived PCA/ecozone objects
+R/        Analysis scripts
+output/   Generated tables and figures (CSV + PDF/JPEG)
+```
+
+Core scripts (run in order):
+
+- `10_load_inputs.R`
+- `20_pca.R`
+- `30_cluster_ecozones.R`
+- `20e_enrichment_test.R`
+- `45_ecozone_map.R`
+
+Outputs include:
+
+- PCA loadings and scores (CSV)
+- Ecozone assignments
+- Silhouette scores
+- Ecozone-language proportion tables
+- Figures and maps
+
+---
+
+## Random Forest: `uralic_rf_modeling_project/`
+
+```
+data/     Modelling grid data
+R/        Modelling scripts
+output/   Model summaries, maps, figures (CSV + PNG/JPEG)
+main.R    Runs full modelling workflow
+```
+
+To run full modelling workflow:
+
+```r
+source("uralic_rf_modeling_project/main.R")
+```
+
+Outputs include:
+
+- Model evaluation summaries (CSV)
+- AUC and threshold results
+- Confusion matrices
+- Variable importance tables
+- Partial dependence data
+- Predicted probability maps
+
+All numeric results underlying figures are provided as machine-readable `.csv` files.
+
+---
+
+## Reproducibility
+
+Analyses were conducted in R.
+
+Session and package information:
+
+```
+session_info.txt
+```
+
+All scripts use relative paths and can be executed from the repository root.
+
+---
+
+
+## License
+
+See `LICENSE` file.
