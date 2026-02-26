@@ -87,7 +87,7 @@ generate_pdp <- function(language, results_list, df, predictors) {
 }
 
 # Output directory
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
+output_dir <- "E:/xxx/xxx/rf_output_directory"
 
 # For each language
 for (lang in names(results_list)) {
@@ -243,7 +243,7 @@ library(patchwork)
 library(cowplot)
 
 # Output
-output_dir <- "E:/URKO_PhDposition/Article 3_ecological niche/rf_output_directory"
+output_dir <- "E:/xxx/xxx/xxx"
 
 # Function to create PDP with annotation
 generate_pdp_with_arrow <- function(language, model, top_var, train_data) {
@@ -334,4 +334,5 @@ uralic_rf %>%
   ggplot(aes(x = biodiversity)) +
   geom_histogram() +
   facet_wrap(~ifelse(Saami == 1, "Saami", "Samoyedic"))
+
 
