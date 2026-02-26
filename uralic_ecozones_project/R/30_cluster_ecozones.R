@@ -26,7 +26,7 @@ eco_names <- c(
 )
 scores$Ecozone_Name <- eco_names[as.character(scores$Ecozone_renamed)]
 
-# Save ecozone label key
+# Saving ecozone label key
 eco_key <- tibble::tibble(Ecozone_renamed = as.integer(names(eco_names)),
                           Ecozone_Name = unname(eco_names))
 readr::write_csv(eco_key, here("output","ecozone_code_name_mapping.csv"))
@@ -52,7 +52,7 @@ centroids <- scores |>
                    Ecozone_Name = dplyr::first(Ecozone_Name), .groups = "drop")
 readr::write_csv(centroids, here("output","ecozone_centroids_PC1_PC8.csv"))
 
-# Write geometry with ecozones to GeoPackage
+# Writing geometry with ecozones to GeoPackage
 #env_sf <- st_read(here("data","env_grid_clean.gpkg"), layer = "env_grid_clean", quiet = TRUE) |>
 #  left_join(scores |> dplyr::select(row_id, Ecozone_renamed, Ecozone_Name), by = "row_id")
 
