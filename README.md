@@ -101,6 +101,10 @@ All scripts use relative paths and can be executed from the repository root.
 
 ---
 
+## Blind Review Notice
+
+This repository is anonymised for double-anonymous peer review.
+Citation details and authorship metadata will be added upon publication.
 
 ## License
 
