@@ -43,9 +43,16 @@ output/   Generated tables and figures (CSV + PDF/JPEG)
 
 Core scripts (run in order):
 
+Core scripts (run in order):
+
 - `10_load_inputs.R`
 - `20_pca.R`
+- `25_silhouette.R`
+- `26_elbow.R`
+- `27_cluster_diagnostics_plot.R`
 - `30_cluster_ecozones.R`
+- `28_cluster_stability.R`
+- `29_biome_agreement.R`
 - `20e_enrichment_test.R`
 - `45_ecozone_map.R`
 
